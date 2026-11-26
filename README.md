@@ -6,7 +6,7 @@ It is not yet complete, has hardcoded values, and only generates object files.
 ```bash
 git clone https://github.com/voltiksrc/sprout
 cd sprout
-cargo run
+cargo run --bin sprout
 ```
 
 ### Warnings
