@@ -1,0 +1,16 @@
+make "project" {
+    exec gcc
+
+    flags = ["-Wall", "-Wextra", "-Wpedantic", "-O2"]
+    inputs = ["src/main.c", "src/util.c"]
+    output = "build/project"
+
+    args = [$flags, $inputs, "-o", $output]
+}
+
+phony "run" {
+    depends = ["project"]
+    exec "./build/project"
+}
+
+default "project"
